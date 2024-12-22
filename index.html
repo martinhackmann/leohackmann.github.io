@@ -1,16 +1,44 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Some of my favorite Pokémon Stores around Los Angeles</title>
+  <title>Pokémon Website</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvlJ06fPpeufu1XJ9I6pvDTknhXwedUoA" async defer></script>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvlJ06fPpeufu1XJ9I6pvDTknhXwedUoA"></script>
 </head>
 <body>
-  <h1>Some of my favorite Pokémon Stores around Los Angeles</h1>
-  <div id="store-list"></div>
-  <div id="map"></div>
+  <div id="container">
+    <!-- Sidebar Tabs -->
+    <div id="sidebar">
+      <button class="tab-button" data-tab="home">Home</button>
+      <button class="tab-button" data-tab="cards">Cards</button>
+      <button class="tab-button" data-tab="stores">Stores</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main">
+      <!-- Home Content -->
+      <div id="home" class="tab-content">
+        <h1>Welcome to the Pokémon Website!</h1>
+        <p>Explore our collection of Pokémon cards and stores.</p>
+      </div>
+
+      <!-- Cards Content -->
+      <div id="cards" class="tab-content" style="display: none;">
+        <h1>Pokémon Cards</h1>
+        <p>Discover rare and amazing Pokémon cards.</p>
+      </div>
+
+      <!-- Stores Content -->
+      <div id="stores" class="tab-content" style="display: none;">
+        <h1>Pokémon Stores in Los Angeles</h1>
+        <div id="map" style="width: 100%; height: 500px;"></div>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
